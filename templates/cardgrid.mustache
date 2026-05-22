@@ -37,9 +37,8 @@
                 {{/hasdesc}}
                 {{#hasurl}}
                     {{#hidebutton}}
-                    {{! sr-only is Bootstrap 4; rename to visually-hidden when upgrading to Bootstrap 5 }}
                     <a href="{{url}}" class="stretched-link">
-                        <span class="sr-only">{{{linktext}}}</span>
+                        <span class="visually-hidden">{{{linktext}}}</span>
                     </a>
                     {{/hidebutton}}
                     {{^hidebutton}}

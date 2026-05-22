@@ -16,8 +16,8 @@ A configurable Moodle block that displays up to nine cards in a responsive Boots
 
 ## Requirements
 
-- Moodle 4.5 or later
-- PHP 8.1 or later
+- Moodle 5.0 or later
+- PHP 8.2 or later
 
 ## Installation
 

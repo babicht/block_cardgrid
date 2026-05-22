@@ -24,8 +24,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2026052205;
-$plugin->requires  = 2024100700;
+$plugin->version   = 2026052206;
+$plugin->requires  = 2025041400;
 $plugin->component = 'block_cardgrid';
 $plugin->maturity  = MATURITY_RC;
-$plugin->release   = '4.5.0 - Heroic Hitchhiker';
+$plugin->release   = '5.0.0 - Melancholic Marvin';
