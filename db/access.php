@@ -1,0 +1,64 @@
+<?php
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+/**
+ * Capability definitions for block_cardgrid.
+ *
+ * @package   block_cardgrid
+ * @copyright 2026 Benjamin Abicht
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+defined('MOODLE_INTERNAL') || die();
+
+$capabilities = [
+
+    // Allows adding the block to a course or other page context.
+    'block/cardgrid:addinstance' => [
+        'riskbitmask'          => RISK_SPAM | RISK_XSS | RISK_PERSONAL,
+        'captype'              => 'write',
+        'contextlevel'         => CONTEXT_BLOCK,
+        'archetypes'           => [
+            'editingteacher' => CAP_ALLOW,
+            'manager'        => CAP_ALLOW,
+        ],
+        'clonepermissionsfrom' => 'moodle/site:manageblocks',
+    ],
+
+    // Allows adding the block to the personal Dashboard (/my).
+    'block/cardgrid:myaddinstance' => [
+        'riskbitmask'          => RISK_SPAM | RISK_XSS,
+        'captype'              => 'write',
+        'contextlevel'         => CONTEXT_SYSTEM,
+        'archetypes'           => [
+            'manager' => CAP_ALLOW,
+        ],
+        'clonepermissionsfrom' => 'moodle/my:manageblocks',
+    ],
+
+    // Allows setting a cohort restriction on individual cards.
+    // Only users with this capability see the cohort selector in the block
+    // editor, and they bypass cohort restrictions when viewing the block.
+    'block/cardgrid:setcohortrestriction' => [
+        'riskbitmask'  => RISK_CONFIG,
+        'captype'      => 'write',
+        'contextlevel' => CONTEXT_SYSTEM,
+        'archetypes'   => [
+            'manager' => CAP_ALLOW,
+        ],
+    ],
+
+];

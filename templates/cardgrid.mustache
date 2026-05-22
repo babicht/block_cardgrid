@@ -1,0 +1,56 @@
+{{!
+    Template for block_cardgrid.
+
+    Context variables:
+      hascards  bool    True when at least one card is visible.
+      cards     array   Each card:
+        colclass    string  Bootstrap column class (col-md-4 etc.).
+        cardid      string  HTML id attribute value.
+        cardclass   string  CSS classes for the card div.
+        hastitle    bool    True when the card has a title.
+        title       string  Already formatted card title (use triple braces).
+        hasdesc     bool    True when the card has a description.
+        desc        string  Already formatted HTML description (use triple braces).
+        hasurl      bool    True when the card has a link URL.
+        url         string  Link target URL.
+        linktext    string  Already formatted link label (use triple braces).
+        btnclass    string  CSS classes for the link element.
+        hidebutton  bool    True when only a visually-hidden stretch link is rendered.
+
+    @package   block_cardgrid
+    @copyright 2026 Benjamin Abicht
+    @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+}}
+{{#hascards}}
+<div class="row cardgrid-row">
+    {{#cards}}
+    <div class="{{colclass}} mb-4 cardgrid-col">
+        <div id="{{cardid}}" class="{{cardclass}}">
+            {{#hastitle}}
+            <div class="card-header">
+                <h5 class="mb-0">{{{title}}}</h5>
+            </div>
+            {{/hastitle}}
+            <div class="card-body d-flex flex-column">
+                {{#hasdesc}}
+                <div class="card-text flex-grow-1">{{{desc}}}</div>
+                {{/hasdesc}}
+                {{#hasurl}}
+                    {{#hidebutton}}
+                    {{! sr-only is Bootstrap 4; rename to visually-hidden when upgrading to Bootstrap 5 }}
+                    <a href="{{url}}" class="stretched-link">
+                        <span class="sr-only">{{{linktext}}}</span>
+                    </a>
+                    {{/hidebutton}}
+                    {{^hidebutton}}
+                    <a href="{{url}}" class="{{btnclass}}">
+                        <span class="btn-label">{{{linktext}}}</span>
+                    </a>
+                    {{/hidebutton}}
+                {{/hasurl}}
+            </div>
+        </div>
+    </div>
+    {{/cards}}
+</div>
+{{/hascards}}
