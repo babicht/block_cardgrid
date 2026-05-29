@@ -28,7 +28,7 @@ $capabilities = [
 
     // Allows adding the block to a course or other page context.
     'block/cardgrid:addinstance' => [
-        'riskbitmask'          => RISK_SPAM | RISK_XSS | RISK_PERSONAL,
+        'riskbitmask'          => RISK_SPAM | RISK_XSS,
         'captype'              => 'write',
         'contextlevel'         => CONTEXT_BLOCK,
         'archetypes'           => [

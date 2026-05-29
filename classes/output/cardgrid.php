@@ -24,8 +24,6 @@
 
 namespace block_cardgrid\output;
 
-defined('MOODLE_INTERNAL') || die();
-
 use context;
 use context_system;
 use renderable;

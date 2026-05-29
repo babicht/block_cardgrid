@@ -57,9 +57,12 @@ $string['cohort_none']           = 'No restriction (visible to all)';
 // ── Advanced settings ─────────────────────────────────────────────────────────
 $string['advancedsettings']        = 'Advanced settings';
 $string['show_card_advanced']      = 'Show advanced per-card settings';
-$string['show_card_advanced_hint'] = 'Enables per-card options for additional CSS classes, restricting visibility to logged-in users, and restricting to a cohort. Most useful on public pages or home pages.';
+$string['show_card_advanced_hint'] = 'Enables per-card options for additional CSS classes, ' .
+    'restricting visibility to logged-in users, and restricting to a cohort. Most useful on public pages or home pages.';
 $string['customid']                = 'Custom ID';
-$string['customid_hint']       = 'If set, card IDs are generated as <code>cardgrid-card-{ID}-1</code> … <code>-9</code>. Allowed characters: letters, digits, hyphens, underscores. Leave empty to use the block instance ID. The ID must be unique on the page if multiple Card Grid blocks are used.';
+$string['customid_hint']       = 'If set, card IDs are generated as <code>cardgrid-card-{ID}-1</code> … <code>-9</code>. ' .
+    'Allowed characters: letters, digits, hyphens, underscores. ' .
+    'Leave empty to use the block instance ID. The ID must be unique on the page if multiple Card Grid blocks are used.';
 $string['linkmode']             = 'Link display';
 $string['linkmode_nolink']      = 'No link (URL stored but not shown)';
 $string['linkmode_button']      = 'Button only';
@@ -68,4 +71,5 @@ $string['hidebutton']           = 'Hide link button';
 $string['linktext_default']     = 'More';
 
 // ── Privacy ──────────────────────────────────────────────────────────────────
-$string['privacy:metadata'] = 'The Card Grid block does not store any personal data. All configuration is site/course-level content entered by administrators or teachers.';
+$string['privacy:metadata'] = 'The Card Grid block does not store any personal data. ' .
+    'All configuration is site/course-level content entered by administrators or teachers.';

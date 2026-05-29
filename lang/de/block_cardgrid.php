@@ -57,9 +57,14 @@ $string['cohort_none']           = 'Keine Einschränkung (für alle sichtbar)';
 // ── Erweiterte Einstellungen ──────────────────────────────────────────────────
 $string['advancedsettings']        = 'Erweiterte Einstellungen';
 $string['show_card_advanced']      = 'Erweiterte Einstellungen pro Kachel anzeigen';
-$string['show_card_advanced_hint'] = 'Schaltet für jede Kachel individuelle CSS-Klassen, die Einschränkung auf eingeloggte Nutzer und die Einschränkung auf eine globale Gruppe frei. Diese Optionen sind vor allem auf öffentlichen Seiten oder Startseiten sinnvoll.';
+$string['show_card_advanced_hint'] = 'Schaltet für jede Kachel individuelle CSS-Klassen, ' .
+    'die Einschränkung auf eingeloggte Nutzer und die Einschränkung auf eine globale Gruppe frei. ' .
+    'Diese Optionen sind vor allem auf öffentlichen Seiten oder Startseiten sinnvoll.';
 $string['customid']                = 'Eigene ID';
-$string['customid_hint']       = 'Wenn angegeben, werden Karten-IDs als <code>cardgrid-card-{ID}-1</code> … <code>-9</code> generiert. Erlaubte Zeichen: Buchstaben, Ziffern, Bindestriche, Unterstriche. Leer lassen, um die Block-Instanz-ID zu verwenden. Wenn mehrere Kartenraster-Blöcke auf einer Seite verwendet werden, muss die ID eindeutig sein.';
+$string['customid_hint']       = 'Wenn angegeben, werden Karten-IDs als <code>cardgrid-card-{ID}-1</code> … <code>-9</code> ' .
+    'generiert. Erlaubte Zeichen: Buchstaben, Ziffern, Bindestriche, Unterstriche. ' .
+    'Leer lassen, um die Block-Instanz-ID zu verwenden. ' .
+    'Wenn mehrere Kartenraster-Blöcke auf einer Seite verwendet werden, muss die ID eindeutig sein.';
 $string['linkmode']             = 'Link-Darstellung';
 $string['linkmode_nolink']      = 'Kein Link (URL gespeichert, aber nicht angezeigt)';
 $string['linkmode_button']      = 'Nur Button';
@@ -68,4 +73,5 @@ $string['hidebutton']           = 'Link-Button ausblenden';
 $string['linktext_default']     = 'Mehr';
 
 // ── Datenschutz ──────────────────────────────────────────────────────────────
-$string['privacy:metadata'] = 'Der Block „Kartenraster" speichert keine personenbezogenen Daten. Alle Konfigurationsdaten sind Inhalte auf Website- oder Kursebene, die von Administratoren oder Lehrenden eingegeben werden.';
+$string['privacy:metadata'] = 'Der Block „Kartenraster“ speichert keine personenbezogenen Daten. ' .
+    'Alle Konfigurationsdaten sind Inhalte auf Website- oder Kursebene, die von Administratoren oder Lehrenden eingegeben werden.';
