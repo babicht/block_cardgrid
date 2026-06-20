@@ -24,9 +24,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2026061000;
-$plugin->requires  = 2025041400;
-$plugin->supported = [500, 502];
+$plugin->version   = 2026062000;
+$plugin->requires  = 2024100700;
+$plugin->supported = [405, 502];
 $plugin->component = 'block_cardgrid';
 $plugin->maturity  = MATURITY_STABLE;
 $plugin->release   = '5.2.0 - Melancholic Marvin';
